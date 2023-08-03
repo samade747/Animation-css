@@ -1,0 +1,68 @@
+.MainBox{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ball{
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    
+    border-radius: 50%;
+    animation: moving 10s infinite linear alternate;
+    transform: translate(0px);
+}
+
+.ball:nth-child(1) {
+    animation-delay: 0;
+}
+.ball:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.ball:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.ball:nth-child(4) {
+    animation-delay: 0.6s;
+}
+.ball:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.floor {
+    height: 20px;
+    width: 400px;
+    background-color: black;
+    width: 260px;
+    height: 60px;
+    background-color: black; 
+    animation: floormoving 1s infinite linear;
+    transform: translate(0px);
+
+
+}
+
+
+@keyframes moving {
+    from {
+        transform: translate(200px, -500px);
+    }
+    to {
+        transform: translate(-200px, 200px);        
+    }
+    
+}
+
+@keyframes floormoving {
+    from {
+        transform: translate(200px, 500px);
+    }
+    to {
+        transform: translate(0px, 0px);        
+    }
+    
+}
